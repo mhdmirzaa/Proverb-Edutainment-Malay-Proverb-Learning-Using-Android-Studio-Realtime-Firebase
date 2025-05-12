@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Proverb App</string>
+    <string name="welcome_to_proverb_app">Welcome to Proverb App</string>
+    <string name="lets_study_proverb_in_app_nyou_can_enjoy_in_app">Lets study proverb in App.\nYou can Enjoy in App</string>
+    <string name="login">Login</string>
+    <string name="signup">SignUp</string>
+    <string name="todo">TODO</string>
+    <string name="google">google</string>
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
+</resources>

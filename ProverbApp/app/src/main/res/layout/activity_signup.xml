@@ -1,0 +1,214 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9F6F7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ImageView for the illustration -->
+        <ImageView
+            android:id="@+id/signupImage"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/signup" />
+
+        <!-- TextView for the title -->
+        <TextView
+            android:id="@+id/signupTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:fontFamily="verdana"
+            android:textStyle="bold"
+            android:layout_below="@id/signupImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/signupSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signupTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Sign up to get started!"
+            android:textColor="#797979"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif" />
+
+        <!-- Name Field -->
+        <LinearLayout
+            android:id="@+id/nameFieldContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signupSubtitle"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_login"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/person"
+                android:tint="#808080"
+                android:padding="5dp"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/yourName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Your Name"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textColorHint="#888888" />
+        </LinearLayout>
+
+        <!-- Email Field -->
+        <LinearLayout
+            android:id="@+id/emailFieldContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameFieldContainer"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_login"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/email"
+                android:padding="5dp"
+                android:tint="#808080"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/yourEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Your Email"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:inputType="textEmailAddress"
+                android:textColor="#000000"
+                android:textColorHint="#888888" />
+        </LinearLayout>
+
+        <!-- Password Field -->
+        <LinearLayout
+            android:id="@+id/passwordFieldContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailFieldContainer"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_login"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_password"
+                android:padding="5dp"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Password"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHint="#888888" />
+        </LinearLayout>
+
+        <!-- Re-Password Field -->
+        <LinearLayout
+            android:id="@+id/rePasswordFieldContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordFieldContainer"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_login"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_password"
+                android:padding="5dp"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/rePassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Re-Password"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHint="#888888" />
+        </LinearLayout>
+
+        <!-- SignUp Button -->
+        <Button
+            android:id="@+id/signupButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rePasswordFieldContainer"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:padding="10dp"
+            android:backgroundTint="#7E57C2"
+            android:background="@drawable/rounded_login"
+            android:text="SignUp"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF" />
+
+        <!-- Already have an account? Login Text -->
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signupButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Already have an account? Login"
+            android:textColor="#00796B"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:layout_marginBottom="50dp" />
+    </RelativeLayout>
+</ScrollView>

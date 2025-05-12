@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#E9F6F7"
+    android:padding="16dp">
+
+    <!-- Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/navTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="5dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back"
+            android:contentDescription="Back Button" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/quizTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Profile"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- Setting Icon -->
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/settings"
+            android:contentDescription="Setting Icon"
+            app:tint="@android:color/black" />
+
+    </LinearLayout>
+
+    <!-- Top Section: User Info -->
+    <RelativeLayout
+        android:id="@+id/userInfoSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded"
+        android:layout_below="@id/navTop"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp">
+
+        <!-- Banner Image -->
+
+        <!-- Profile Image -->
+
+        <ImageView
+            android:id="@+id/bannerImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/rounded"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profile"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/circle_border"
+            android:clipToOutline="true"
+            android:elevation="4dp" />
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/userNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profileImageView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:text="User"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <!-- User Handle -->
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userNameTextView"
+            android:layout_toEndOf="@id/profileImageView"
+            android:layout_marginStart="16dp"
+            android:text="email"
+
+            android:textSize="14sp"
+            android:textColor="#F3F3F3" />
+    </RelativeLayout>
+
+    <!-- Streaks Section -->
+    <LinearLayout
+        android:id="@+id/scoreSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userInfoSection"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_quiz_background"
+        android:padding="16dp"
+        android:elevation="4dp">
+
+        <!-- Text Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pointsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adlam_display"
+                android:text="You did"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/scoreTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/baloo_thambi"
+                android:text="Score 0"
+                android:textColor="#333333"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Image Section -->
+        <ImageView
+            android:id="@+id/scoreImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/score"
+            android:scaleType="centerInside"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/titleProverb"
+        android:layout_below="@id/scoreSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/adlam_display"
+            android:text="Proverb Quizzes You've Completed"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- RecyclerView for Answered Proverbs -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/answeredProverbsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleProverb"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="65dp"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:scrollbars="none"
+        tools:listitem="@layout/item_proverb" />
+
+
+    <!-- Floating Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/customBottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_nav_menu"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Home Button -->
+        <ImageView
+            android:id="@+id/menu_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            app:itemIconTint="@color/nav_item_color"
+            android:src="@drawable/home_app"
+            android:contentDescription="Home"
+            android:scaleType="centerInside"
+            app:tint="@color/nav_item_color" />
+
+        <!-- Leaderboard Button -->
+        <ImageView
+            android:id="@+id/menu_leaderboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/leaderboard"
+            android:contentDescription="Leaderboard"
+            android:scaleType="centerInside"
+            app:tint="@color/nav_item_color" />
+
+        <!-- Profile Button -->
+        <ImageView
+            android:id="@+id/menu_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/person_logo"
+            android:contentDescription="Profile"
+            android:scaleType="centerInside"
+            app:tint="@color/black"/>
+    </LinearLayout>
+</RelativeLayout>

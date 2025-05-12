@@ -1,0 +1,381 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#E9F6F7">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:id="@+id/header_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp">
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/userNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi, User"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <!-- Logout Button -->
+        <ImageView
+            android:id="@+id/quitButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/logout"
+            android:scaleType="centerCrop"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            app:tint="#000000" />
+    </RelativeLayout>
+
+    <!-- ScrollView enclosing all other content -->
+    <ScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_home"
+        android:layout_above="@id/customBottomNavigation"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <!-- Title Section -->
+            <TextView
+                android:id="@+id/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adlam_display"
+                android:paddingBottom="8dp"
+                android:text="LET'S LEARN MALAY PROVERBS"
+                android:textColor="#000000"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Quiz Progress Section -->
+            <RelativeLayout
+                android:id="@+id/quiz_card"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_nav_menu"
+                android:padding="16dp">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/quiz_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quiz Progress"
+                    android:textColor="#333333"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Quiz Progress Text -->
+                <TextView
+                    android:id="@+id/quiz_progress_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Progress: 0/0"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_below="@id/quiz_title"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Progress Bar -->
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="215dp"
+                    android:layout_height="8dp"
+                    android:layout_below="@id/quiz_progress_text"
+                    android:layout_marginTop="10dp" />
+
+                <!-- Quiz Progress Description -->
+                <TextView
+                    android:id="@+id/quiz_progress_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complete quizzes to increase your level."
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:layout_below="@id/progress_bar"
+                    android:layout_marginTop="10dp" />
+
+                <!-- Image -->
+                <ImageView
+                    android:id="@+id/quiz_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/exam" />
+            </RelativeLayout>
+
+            <!-- Quiz and Lesson Sections -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <!-- Quiz Section -->
+
+                <RelativeLayout
+                    android:id="@+id/quizButton"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_quiz_background"
+                    android:padding="16dp">
+
+                    <!-- Quiz Icon -->
+                    <ImageView
+                        android:id="@+id/quizIcon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/quiz" />
+
+                    <!-- Quiz Title -->
+
+                    <TextView
+                        android:id="@+id/quizTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/quizIcon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="Quiz"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- Quiz Description -->
+                    <TextView
+                        android:id="@+id/quizDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/quizTitle"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="Test your knowledge"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <!-- Lesson Section -->
+                <RelativeLayout
+                    android:id="@+id/LessonPart"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_lesson_background"
+                    android:padding="16dp">
+
+                    <!-- Lesson Icon -->
+                    <ImageView
+                        android:id="@+id/lessonIcon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/lesson" />
+
+                    <!-- Lesson Title -->
+                    <TextView
+                        android:id="@+id/lessonTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lessonIcon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="Lesson"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- Lesson Description -->
+                    <TextView
+                        android:id="@+id/lessonDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lessonTitle"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="Learn the Proverbs"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/extraButton"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rounded_nav_menu"
+                android:padding="16dp">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/extraTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Extra Quiz"
+                    android:textColor="#333333"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Quiz Progress Description -->
+                <TextView
+                    android:id="@+id/extraDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Try this quizzes to increase your level."
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:layout_below="@id/extraTitle"
+                    />
+
+                <!-- Image -->
+                <ImageView
+                    android:id="@+id/quiz_extra_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/quiztime" />
+            </RelativeLayout>
+
+            <!-- New Layout Section for Pie Chart -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:background="@drawable/rounded_card_background">
+
+                <!-- Proverb Quiz Title -->
+                <TextView
+                    android:id="@+id/pieChartTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Proverb Quiz Completion"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#4A4A4A"
+                    android:layout_gravity="center" />
+
+                <!-- Pie Chart -->
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="16dp" />
+
+                <!-- List Proverb Quiz -->
+                <LinearLayout
+                    android:id="@+id/proverbQuizList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp">
+
+                    <!-- Example for One List Item -->
+                    <!-- You can dynamically populate this using your Java code -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <!-- Color Indicator -->
+                        <View
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:background="#FF6384"
+                        android:layout_marginEnd="8dp" />
+
+                        <!-- Quiz Name -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Akibat (30%)"
+                            android:textSize="14sp"
+                            android:textColor="#4A4A4A" />
+                    </LinearLayout>
+
+                    <!-- Add more items dynamically -->
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Floating Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/customBottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_nav_menu"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Home Button -->
+        <ImageView
+            android:id="@+id/menu_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            app:itemIconTint="@color/nav_item_color"
+            android:src="@drawable/home_app"
+            android:contentDescription="Home"
+            android:scaleType="centerInside"
+            app:tint="@color/black" />
+
+        <!-- Leaderboard Button -->
+        <ImageView
+            android:id="@+id/menu_leaderboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/leaderboard"
+            android:contentDescription="Leaderboard"
+            android:scaleType="centerInside"
+            app:tint="@color/nav_item_color" />
+
+        <!-- Profile Button -->
+        <ImageView
+            android:id="@+id/menu_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/person_logo"
+            android:contentDescription="Profile"
+            android:scaleType="centerInside"
+            app:tint="@color/nav_item_color" />
+    </LinearLayout>
+</RelativeLayout>

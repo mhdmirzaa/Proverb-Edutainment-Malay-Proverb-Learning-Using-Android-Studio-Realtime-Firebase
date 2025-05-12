@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="nav_item_color">#7E57C2</color>
+    <!-- Default App Colors -->
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!-- Custom Colors for Pie Chart -->
+    <color name="yellow">#FFD700</color>
+    <color name="violet">#EE82EE</color>
+    <color name="lightBlue">#87CEFA</color>
+    <color name="lightGreen">#90EE90</color>
+    <color name="orange">#FFA500</color>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E9F6F7">
+
+    <!-- Character Image -->
+    <ImageView
+        android:id="@+id/characterImage"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:contentDescription="Character holding books"
+        android:src="@drawable/study" />
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/characterImage"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Learn and Master Malay Proverbs"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center" />
+
+    <!-- Description Text -->
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:text="Study Malay proverbs, understand their meanings,\nand test your knowledge with engaging quizzes!"
+        android:textColor="#6D6D6D"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:fontFamily="sans-serif-light" />
+
+    <!-- Get Started Button -->
+    <Button
+        android:id="@+id/getStartedButton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#7E57C2"
+        android:drawablePadding="8dp"
+        android:elevation="4dp"
+        android:fontFamily="sans-serif-medium"
+        android:padding="10dp"
+        android:text="Get started"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+</RelativeLayout>

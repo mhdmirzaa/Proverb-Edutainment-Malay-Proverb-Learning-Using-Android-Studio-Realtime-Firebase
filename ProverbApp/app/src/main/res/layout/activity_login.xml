@@ -1,0 +1,182 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9F6F7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ImageView for the illustration -->
+        <ImageView
+            android:id="@+id/loginIllustration"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/login" />
+
+        <!-- TextView for the title -->
+        <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello Again!"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:fontFamily="verdana"
+            android:textStyle="bold"
+            android:layout_below="@id/loginIllustration"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Welcome back you’ve been missed!"
+            android:textColor="#797979"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif" />
+
+        <!-- Email Field -->
+        <LinearLayout
+            android:id="@+id/emailFieldContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subtitleText"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_login"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/sym_action_email"
+                android:textColor="#888888"
+                android:padding="5dp"
+                android:tint="#808080"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/yourEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Email ID"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:inputType="textEmailAddress"
+                android:textColor="#000000"
+                android:textColorHint="#888888" />
+        </LinearLayout>
+
+        <!-- Password Field -->
+        <LinearLayout
+            android:id="@+id/passwordFieldContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailFieldContainer"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_login"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_password"
+                android:padding="5dp"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Password"
+                android:tint="#808080"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHint="#888888" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordFieldContainer"
+            android:padding="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="#7E57C2"
+            android:background="@drawable/rounded_login"
+            android:text="Login"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF" />
+
+        <!-- Not registered yet? Register Text -->
+        <TextView
+            android:id="@+id/registerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/googleLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Not registered yet? Register"
+            android:textColor="#00796B"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:layout_marginBottom="50dp"/>
+
+        <!-- Or Continue With Divider -->
+        <TextView
+            android:id="@+id/orContinueWithText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Or continue with"
+            android:textColor="#797979"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif" />
+
+        <!-- Social Login Buttons -->
+
+
+            <ImageButton
+                android:id="@+id/googleLogin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_below="@id/orContinueWithText"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/google1"
+                android:background="@android:color/transparent" />
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,246 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E9F6F7"
+    android:padding="16dp">
+
+    <!-- Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/navTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:background="#E9F6F7">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back"
+            android:contentDescription="Back Button" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/quizTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Proverb Leaderboards"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:gravity="center" />
+        <!-- Help Icon -->
+        <ImageView
+            android:id="@+id/helpButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Help Button" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/navTop">
+
+            <!-- Podium Layout -->
+            <LinearLayout
+                android:id="@+id/podiumLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/podium1"
+                android:padding="30dp"
+                android:gravity="center">
+
+                <!-- Top 3 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingVertical="16dp">
+
+                    <!-- Second Place -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/secondPlaceImageView"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_border"
+                            android:clipToOutline="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/profile" />
+
+                        <TextView
+                            android:id="@+id/secondPlaceNameTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/adlam_display"
+                            android:gravity="center"
+                            android:text="User 2"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/secondPlaceScoreTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/mochiy_pop_p_one"
+                            android:text="105" />
+                    </LinearLayout>
+
+                    <!-- First Place -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_marginBottom="40dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/firstPlaceImageView"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_border"
+                            android:clipToOutline="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/profile" />
+
+                        <TextView
+                            android:id="@+id/firstPlaceNameTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/adlam_display"
+                            android:gravity="center"
+                            android:text="User 1"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/firstPlaceScoreTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mochiy_pop_p_one"
+                            android:gravity="center"
+                            android:text="146" />
+                    </LinearLayout>
+
+                    <!-- Third Place -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/thirdPlaceImageView"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_border"
+                            android:clipToOutline="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/profile" />
+
+                        <TextView
+                            android:id="@+id/thirdPlaceNameTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/adlam_display"
+                            android:gravity="center"
+                            android:text="User 3"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/thirdPlaceScoreTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mochiy_pop_p_one"
+                            android:gravity="center"
+                            android:text="99" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- RecyclerView for Leaderboard -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/leaderboardRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingVertical="8dp"
+                android:scrollbars="vertical"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="16dp"
+                android:layout_marginBottom="26dp"/>
+
+        </LinearLayout>
+
+    <!-- Floating Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/customBottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_nav_menu"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Home Button -->
+        <ImageView
+            android:id="@+id/menu_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            app:itemIconTint="@color/nav_item_color"
+            android:src="@drawable/home_app"
+            android:contentDescription="Home"
+            android:scaleType="centerInside"
+            app:tint="@color/nav_item_color" />
+
+        <!-- Leaderboard Button -->
+        <ImageView
+            android:id="@+id/menu_leaderboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/leaderboard"
+            android:contentDescription="Leaderboard"
+            android:scaleType="centerInside"
+            app:tint="@color/black" />
+
+        <!-- Profile Button -->
+        <ImageView
+            android:id="@+id/menu_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/person_logo"
+            android:contentDescription="Profile"
+            android:scaleType="centerInside"
+            app:tint="@color/nav_item_color" />
+    </LinearLayout>
+</RelativeLayout>
